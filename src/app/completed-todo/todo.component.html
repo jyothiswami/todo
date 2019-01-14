@@ -1,0 +1,21 @@
+<div class="jumbotron" *ngIf="tasks.length == 0">
+  This is for completed tasks, You have not completed Any tasks
+</div>
+<div *ngIf="tasks.length != 0">
+    <p class="text-success bold text-center">Here Are Your Completed Tasks: </p>
+    <accordion *ngIf="tasks.length != 0">
+        <accordion-group *ngFor="let task of tasks">
+            <button class="btn btn-link btn-block clearfix" accordion-heading>
+            <div class="float center strong text-danger">{{ task.TASK }} </div>
+            </button>
+            <div class="row border">
+                <div class="col-lg-4 card-body text-success">Time Taken: </div>
+                <div class="col-lg-8 card-body">{{ task.TIMETAKEN }} hrs</div>
+            </div>
+            <div class="row border">
+                <div class="col-lg-4 card-body text-success">Your feedback: </div>
+                <div class="col-lg-8 card-body">{{ task.COMMENTS }} </div>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>

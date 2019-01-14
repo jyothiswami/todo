@@ -1,0 +1,11 @@
+.panel-default>.panel-heading {
+    border-bottom-color: black;
+}
+
+.border {
+    border-bottom: 1px solid black;
+}
+.card-body {
+    padding: 0.5% 0;
+    margin-bottom: 0.1%;
+}
